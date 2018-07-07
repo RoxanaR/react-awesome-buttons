@@ -1,0 +1,56 @@
+.roundButton {
+    width: 70px;
+    height: 70px;
+    background-color: #00ff23;
+    border: none;
+    border-radius: 100%
+}
+
+.simpleHoverButton {
+    width: 200px;
+    height: 50px;
+    background-color: #00ff23;
+    fontSize: 16px;
+    border: none;
+    color: #000;
+    position: relative;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+.simpleHoverButton:hover {
+    background: #000;
+    color: #00ff23;
+}
+
+.simpleHoverButton:after, .simpleHoverButton:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #00ff23;
+    transition: 400ms ease all;
+}
+
+.simpleHoverButton:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+
+.simpleHoverButton:hover:before,.simpleHoverButton:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+
+.mainContent {
+    width: 200px;
+    height: 50px;
+    background-color: #00ff23;
+    font-size: 16px;
+    border: none;
+}

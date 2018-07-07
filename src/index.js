@@ -1,26 +1,22 @@
-/**
- * @class ExampleComponent
- */
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import SimpleButton from './lib/SimpleButton';
+import LoadingButton from './lib/LoadingButton';
+import RoundButton from './lib/RoundButton';
+import SimpleHoverButton from './lib/SimpleHoverButton';
 
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+class Buttons extends React.Component {
+    render() {
+        return (
+            <React.Fragment>
+                <SimpleButton text='Simple Button'/>
+                <LoadingButton text='Loading'/>
+                <RoundButton text='Round Button'/>
+                <SimpleHoverButton text='Simple Hover'/>
+            </React.Fragment>
+        )
+    }
 }
+
+ReactDOM.render(<Buttons />, document.getElementById('root'));
